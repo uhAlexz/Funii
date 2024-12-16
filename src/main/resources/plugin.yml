@@ -1,0 +1,45 @@
+name: Funii
+version: '1.0-BETA'
+main: xyz.uhalexz.funii.Funii
+api-version: '1.20'
+author: 'uhalexz'
+
+commands:
+  fly:
+    description: 'Allows you to fly!'
+    permission: funii.fly
+    permission-message: 'hey! you have no permission for this.'
+    aliases:
+      - f
+      - flight
+  gm:
+    description: 'Change your gamemode!'
+    permission: funii.gm
+    permission-message: 'hey! you have no permission for this.'
+  gma:
+    description: 'Change your gamemode to adventure!'
+    permission: funii.gm
+    permission-message: 'hey! you have no permission for this.'
+  gms:
+    description: 'Change your gamemode to survival!'
+    permission: funii.gm
+    permission-message: 'hey! you have no permission for this.'
+  gmsp:
+    description: 'Change your gamemode to spectator!'
+    permission: funii.gm
+    permission-message: 'hey! you have no permission for this.'
+  gmc:
+    description: 'Change your gamemode to creative!'
+    permission: funii.gm
+    permission-message: 'hey! you have no permission for this.'
+  stick:
+    description: 'Get a fireball stick!'
+    permission: funii.fun
+    aliases:
+      - fbstick
+      - fb
+    permission-message: 'hey! you have no permission for this.'
+  funii:
+    description: "Funii's main plugin command."
+    permission: funii.dev
+    permission-message: 'hey! you have no permission for this.'

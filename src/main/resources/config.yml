@@ -1,0 +1,8 @@
+
+# Funii Configuration File
+
+funCommands:
+  stickEnabled: true
+
+messages:
+  reloadMessage: "§aConfig has been reloaded successfully!" # Use § instead of & when using color codes.
