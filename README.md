@@ -6,19 +6,19 @@
 
   <a href='https://github.com/uhAlexz/Funii/releases'>
 
-  <img src='https://img.shields.io/github/v/release/uhAlexz/Funii?color=%237a34eb&label=version&style=flat-square'>
+  <img src='https://img.shields.io/github/v/release/uhAlexz/Funii?color=%fdff33&label=version&style=flat-square'>
 
   </a>
 
   <a href='https://github.com/uhAlexz/Funii/blob/main/LICENSE'>
 
-  <img src='https://img.shields.io/github/license/uhAlexz/Funii?color=%230fa685&label=license&style=flat-square'>
+  <img src='https://img.shields.io/github/license/uhAlexz/Funii?color=%ffc633&label=license&style=flat-square'>
 
   </a>
 
   <a href='https://github.com//SkEditorPlus/SkEditor/releases/latest'>
 
-  <img src='https://img.shields.io/github/downloads/uhAlexz/Funii/total?color=%230fa621&style=flat-square'>
+  <img src='https://img.shields.io/github/downloads/uhAlexz/Funii/total?color=%ff9633&style=flat-square'>
 
   </a>
   <br/>
