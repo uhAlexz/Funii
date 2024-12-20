@@ -12,14 +12,13 @@ import java.util.UUID;
 
 public class Back implements CommandExecutor {
 
-    private Funii plugin = null;
+    private final Funii plugin;
     private HashMap<UUID, Location> deathLocations = null;
-    private String PREFIX = null;
+
 
     public Back(Funii plugin, HashMap<UUID, Location> deathLocations) {
         this.plugin = plugin;
         this.deathLocations = deathLocations;
-        this.PREFIX = plugin.getConfig().getString("messages.prefix");
     }
 
     public boolean onCommand(CommandSender sender, Command command, String label, String [] args) {
@@ -28,6 +27,7 @@ public class Back implements CommandExecutor {
             return true;
         }
 
+        String PREFIX = plugin.getConfig().getString("messages.prefix");
         UUID playerId = player.getUniqueId();
 
         if (deathLocations.containsKey(playerId)) {

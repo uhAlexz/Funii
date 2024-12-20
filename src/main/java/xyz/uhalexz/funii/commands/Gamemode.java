@@ -10,15 +10,11 @@ import xyz.uhalexz.funii.Funii;
 
 public class Gamemode implements CommandExecutor {
 
-    private Funii plugin = null;
-    private String PREFIX = null;
+    private final Funii plugin;
 
     public Gamemode(Funii plugin) {
-
         this.plugin = plugin;
-        this.PREFIX = plugin.getConfig().getString("messages.prefix");
     }
-
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
@@ -27,6 +23,8 @@ public class Gamemode implements CommandExecutor {
             sender.sendMessage("Only players can run this command.");
             return true;
         }
+
+        String PREFIX = plugin.getConfig().getString("messages.prefix");
 
         switch (label.toLowerCase()) {
             case "gmc":

@@ -16,12 +16,11 @@ import java.util.Arrays;
 
 public class Stick implements CommandExecutor {
 
-    private Funii plugin = null;
-    private String PREFIX = null;
+    private final Funii plugin;
+
 
     public Stick(Funii plugin) {
         this.plugin = plugin;
-        this.PREFIX = plugin.getConfig().getString("messages.prefix");
     }
 
     @Override
@@ -31,6 +30,8 @@ public class Stick implements CommandExecutor {
             sender.sendMessage("Only players can run this command.");
             return true;
         }
+
+        String PREFIX = plugin.getConfig().getString("messages.prefix");
 
         ItemStack fbStick = new ItemStack(Material.STICK);
         ItemMeta meta = fbStick.getItemMeta();

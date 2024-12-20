@@ -8,13 +8,14 @@ import org.bukkit.entity.Player;
 import xyz.uhalexz.funii.Funii;
 
 public class Fly implements CommandExecutor {
-    private Funii plugin = null;
-    private String PREFIX = null;
+    private final Funii plugin;
+
 
     public Fly(Funii plugin) {
         this.plugin = plugin;
-        this.PREFIX = plugin.getConfig().getString("messages.prefix");
     }
+
+
 
     public boolean onCommand(CommandSender sender, Command command, String label, String [] args) {
 
@@ -22,6 +23,8 @@ public class Fly implements CommandExecutor {
             sender.sendMessage("Only players can run this command.");
             return true;
         }
+
+        String PREFIX = plugin.getConfig().getString("messages.prefix");
 
         if (player.getAllowFlight()) {
             player.setAllowFlight(false);
