@@ -24,7 +24,7 @@ public class FuniiCMD implements CommandExecutor {
             sender.sendMessage(plugin.getConfig().getString("messages.reloadMessage"));
 
             if (plugin.getConfig().getBoolean("funCommands.stickEnabled")) {
-                plugin.getCommand("stick").setExecutor(new Stick());
+                plugin.getCommand("stick").setExecutor(new Stick(plugin));
             } else {
                 plugin.getCommand("stick").setExecutor(new DisabledCMD());
             }

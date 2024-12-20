@@ -6,10 +6,19 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import xyz.uhalexz.funii.Funii;
 
 public class Gamemode implements CommandExecutor {
 
-    private static final String PREFIX = ChatColor.translateAlternateColorCodes('&', "&eFunii &r» ");
+    private Funii plugin = null;
+    private String PREFIX = null;
+
+    public Gamemode(Funii plugin) {
+
+        this.plugin = plugin;
+        this.PREFIX = plugin.getConfig().getString("messages.prefix");
+    }
+
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {

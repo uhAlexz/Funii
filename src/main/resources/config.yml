@@ -6,3 +6,4 @@ funCommands:
 
 messages:
   reloadMessage: "§aConfig has been reloaded successfully!" # Use § instead of & when using color codes.
+  prefix: "§eFunii §r» "
