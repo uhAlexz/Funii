@@ -1,5 +1,5 @@
 name: Funii
-version: '1.1-BETA'
+version: '1.2-BETA'
 main: xyz.uhalexz.funii.Funii
 api-version: '1.20'
 author: 'uhalexz'
@@ -46,4 +46,24 @@ commands:
   back:
     description: "Go back to your original position."
     permission: funii.back
+    permission-message: 'hey! you have no permission for this.'
+  invsee:
+    description: "View a player's inventory!"
+    permission: funii.invsee
+    permission-message: 'hey! you have no permission for this.'
+  day:
+    description: "Change the world's time to day."
+    permission: funii.time
+    permission-message: 'hey! you have no permission for this.'
+  noon:
+    description: "Change the world's time to noon."
+    permission: funii.time
+    permission-message: 'hey! you have no permission for this.'
+  night:
+    description: "Change the world's time to night."
+    permission: funii.time
+    permission-message: 'hey! you have no permission for this.'
+  midnight:
+    description: "Change the world's time to midnight."
+    permission: funii.time
     permission-message: 'hey! you have no permission for this.'

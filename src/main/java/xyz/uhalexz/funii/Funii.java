@@ -5,13 +5,14 @@ import org.bukkit.plugin.java.JavaPlugin;
 import xyz.uhalexz.funii.commands.*;
 import xyz.uhalexz.funii.commands.completers.FCompleter;
 import xyz.uhalexz.funii.commands.completers.GMCompleter;
+import xyz.uhalexz.funii.commands.completers.ISCompleter;
 import xyz.uhalexz.funii.listeners.AntiFB;
 import xyz.uhalexz.funii.listeners.DeathListener;
+import xyz.uhalexz.funii.listeners.InventoryListener;
 import xyz.uhalexz.funii.listeners.fun.FBStick;
 
 import java.util.HashMap;
 import java.util.UUID;
-
 
 public final class Funii extends JavaPlugin {
 
@@ -37,9 +38,18 @@ public final class Funii extends JavaPlugin {
 
         getCommand("gm").setTabCompleter(new GMCompleter());
 
+        getCommand("invsee").setExecutor(new Invsee(this));
+        getCommand("invsee").setTabCompleter(new ISCompleter());
+
+        getCommand("day").setExecutor(new Time(this));
+        getCommand("noon").setExecutor(new Time(this));
+        getCommand("night").setExecutor(new Time(this));
+        getCommand("midnight").setExecutor(new Time(this));
+
         getServer().getPluginManager().registerEvents(new FBStick(), this);
         getServer().getPluginManager().registerEvents(new AntiFB(), this);
         getServer().getPluginManager().registerEvents(new DeathListener(deathLocations), this);
+        getServer().getPluginManager().registerEvents(new InventoryListener(), this);
 
         if (getConfig().getBoolean("funCommands.stickEnabled")) {
             getCommand("stick").setExecutor(new Stick(this));

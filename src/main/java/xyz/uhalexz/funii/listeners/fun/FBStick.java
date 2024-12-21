@@ -54,7 +54,7 @@ public class FBStick implements Listener {
         if (item.getType() == Material.STICK && item.getItemMeta() != null) {
             ItemMeta meta = item.getItemMeta();
 
-            if (meta.hasDisplayName() && ChatColor.stripColor(meta.getDisplayName()).equals("Fireball Stick")) {
+            if (meta.hasDisplayName() && meta.hasLore() && ChatColor.stripColor(meta.getDisplayName()).equals("Fireball Stick") && ChatColor.stripColor(meta.getLore().get(0)).contains("Right Click to shoot")) {
                 Fireball fireball = player.launchProjectile(Fireball.class);
                 Vector direction = player.getLocation().getDirection();
                 fireball.setVelocity(direction.multiply(2));
