@@ -16,7 +16,7 @@
 
   </a>
 
-  <a href='https://github.com//SkEditorPlus/SkEditor/releases/latest'>
+  <a href='https://github.com/uhAlexz/Funii/releases/latest'>
 
   <img src='https://img.shields.io/github/downloads/uhAlexz/Funii/total?color=%ff9633&style=flat-square'>
 
